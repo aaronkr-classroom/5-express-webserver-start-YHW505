@@ -18,7 +18,7 @@ exports.logErrors = (err, req, res, next) => {
  */
 exports.resNotFound = (req, res) => {
     let errorCode = httpStatus.NOT_FOUND;
-    res.sttus(errorCode);
+    res.status(errorCode);
     //res.send('~${errorCode} | The resource does not exist!`);
     res.sendFile(`./public/${errorCode}.html`, {
         root:'./'
